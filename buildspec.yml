@@ -22,8 +22,14 @@ phases:
          - ls
          - google-chrome --version
          - chromedriver --version
-         - apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EB3E94ADBE1229CF
-         - sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-trusty-prod trusty main" > /etc/apt/sources.list.d/dotnetdev.list' 
+         - apt-get update
+         - apt-get install -y apt-transport-https
+         - apt-get update
+         - apt-get install -y dotnet-sdk-2.1
+         - apt-get update
+         - apt-get install -y apt-transport-https
+         - apt-get update
+         - apt-get install -y aspnetcore-runtime-2.1
          - apt update
          - apt-get install dotnet-sdk-2.0.0
          
