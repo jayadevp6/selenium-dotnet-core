@@ -32,5 +32,6 @@ phases:
          - echo Build started on `date`
          - ls
          - cd Rafa.Tests
+         - dotnet restore
          - dotnet test
          
